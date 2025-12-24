@@ -1,0 +1,30 @@
+{
+  "name": "dermai",
+  "version": "1.0.0",
+  "description": "DermAI - AI-based skin disease analysis platform",
+  "private": true,
+  "scripts": {
+    "install": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "start": "npm run start:mongo && npm run start:backend & npm run start:frontend",
+    "start:mongo": "powershell -ExecutionPolicy Bypass -File ./start-mongodb.ps1",
+    "start:backend": "cd backend && npm run start:dev",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "powershell -ExecutionPolicy Bypass -File ./start.ps1",
+    "clean": "rimraf backend/node_modules frontend/node_modules backend/dist frontend/.next frontend/out"
+  },
+  "keywords": [
+    "dermai",
+    "skin-disease",
+    "ai",
+    "diagnosis"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}
+
+
+
+
+

@@ -1,6 +1,7 @@
 # Node.js dependencies
 node_modules/
 npm-debug.log
+package-lock.json
 
 # Environment files
 .env
@@ -10,15 +11,41 @@ npm-debug.log
 .env.production.local
 
 # Python virtual environment
-ai_service/venv/
+venv/
+ai/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
 
 # Build outputs
 .next/
 dist/
-__pycache__/
+build/
+*.tsbuildinfo
+
+# Uploaded files (user data)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Large datasets (exclude to keep repo size manageable)
+ai/datasets/
+ai/training/models/
 
 # OS / Editor files
 .DS_Store
 *.log
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
